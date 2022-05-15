@@ -1,0 +1,211 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #4e5a74;
+  margin: 0;
+  color: #ffffff;
+  max-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.5s;
+}
+
+a:hover,
+a:focus {
+  color: #474681;
+  outline: none;
+}
+
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer .container {
+  justify-content: space-between;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.main .container {
+  flex-wrap: wrap;
+  column-gap: calc(40vw - 15rem);
+}
+
+input[type="radio"] {
+  visibility: hidden;
+  height: 0;
+}
+
+.control-buttons {
+  width: 14rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.label {
+  border: 0.5rem solid #474681;
+  border-radius: 100%;
+  transition: 0.4s ease-in-out;
+}
+
+.label-content {
+  border: 0.3rem solid #f7f5f5;
+  border-radius: 100%;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: #faf9f9;
+  transition: 0.4s ease-in-out;
+}
+
+.label:hover {
+  cursor: pointer;
+  background-color: #352b28;
+}
+
+.label:hover .label-content {
+  cursor: pointer;
+  border-color: #0f0f0f;
+  background-color: #0f0f0f;
+}
+
+#btn-1:checked ~ .control-buttons > .label_1 .label-content,
+#btn-2:checked ~ .control-buttons > .label_2 .label-content,
+#btn-3:checked ~ .control-buttons > .label_3 .label-content,
+#btn-4:checked ~ .control-buttons > .label_4 .label-content,
+#btn-5:checked ~ .control-buttons > .label_5 .label-content {
+  background-color: transparent;
+}
+
+#btn-1:checked ~ .control-buttons > .label_1:hover,
+#btn-2:checked ~ .control-buttons > .label_2:hover,
+#btn-3:checked ~ .control-buttons > .label_3:hover,
+#btn-4:checked ~ .control-buttons > .label_4:hover,
+#btn-5:checked ~ .control-buttons > .label_5:hover {
+  background-color: transparent;
+}
+
+.label:active .label-content {
+  background-color: #ebdcb2;
+  transition: 0.4ms ease-in-out;
+}
+
+#btn-1:checked ~ .slider > .slider__container {
+  transform: translateX(0);
+}
+
+#btn-2:checked ~ .slider > .slider__container {
+  transform: translateX(-100%);
+}
+
+#btn-3:checked ~ .slider > .slider__container {
+  transform: translateX(-200%);
+}
+
+#btn-4:checked ~ .slider > .slider__container {
+  transform: translateX(-300%);
+}
+
+#btn-5:checked ~ .slider > .slider__container {
+  transform: translateX(-400%);
+}
+
+#btn-1:checked ~ .mem-titles > .mem-titles__container {
+  transform: translateX(0);
+}
+
+#btn-2:checked ~ .mem-titles > .mem-titles__container {
+  transform: translateX(-40vw);
+}
+
+#btn-3:checked ~ .mem-titles > .mem-titles__container {
+  transform: translateX(-80vw);
+}
+
+#btn-4:checked ~ .mem-titles > .mem-titles__container {
+  transform: translateX(-120vw);
+}
+
+#btn-5:checked ~ .mem-titles > .mem-titles__container {
+  transform: translateX(-160vw);
+}
+
+.slider {
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 0.3rem 0.5rem 0.5rem #cfcece;
+  width: 80vw;
+  height: 36vw;
+  margin-bottom: 2rem;
+}
+
+.slider__container {
+  display: flex;
+  transition: 1s ease-in-out;
+}
+
+.mem {
+  min-width: 80vw;
+  height: 36vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4.5rem;
+}
+
+.mem_1 {
+  background: no-repeat center/cover url("./img/1.avif");
+}
+.mem_2 {
+  background: no-repeat center/cover url("./img/2.avif");
+}
+.mem_3 {
+  background: no-repeat center/cover url("./img/3.avif");
+}
+.mem_4 {
+  background: no-repeat center/cover url("./img/4.avif");
+}
+.mem_5 {
+  background: no-repeat center/cover url("./img/5.avif");
+}
+
+.mem-titles {
+  overflow: hidden;
+  width: 40vw;
+}
+
+.mem-titles__container {
+  display: flex;
+  transition: 1s ease-in-out;
+}
+
+.mem-text {
+  min-width: 100%;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.rss-logo {
+  width: 6rem;
+  height: 2rem;
+  transition: 0.3s ease-in-out;
+}
+
+.rss-logo:hover {
+  filter: invert(46%) sepia(90%) saturate(26%) hue-rotate(342deg)
+    brightness(98%) contrast(90%);
+}
